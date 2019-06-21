@@ -7,13 +7,14 @@
       In this wacky, thrilling, hilarious, and suspenseful story you'll find decisions that wrack your soul to its very core. Featuring exciting voice over by the talented completely inexperienced voice artist ALLISTER MOON and at least 10 whole pages of story! Get ready, start now!
     </p>
 
-    <a class="btn btn-primary" href="#">START NOW!</a>
+    <router-link v-bind:to="firstPageLink" class="btn btn-primary">START NOW!</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Menu'
+  name: 'Menu',
+  props: ['firstPageLink']
 }
 </script>
 

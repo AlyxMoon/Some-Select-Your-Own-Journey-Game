@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 #navbar-wrapper {
-  height: 40px;
+  height: 52px;
 }
 
 nav {

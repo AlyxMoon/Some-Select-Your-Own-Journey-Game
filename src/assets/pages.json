@@ -1,0 +1,26 @@
+[
+  {
+    "name": "page_1",
+    "next_pages": [
+      {
+        "name": "page_2",
+        "description": "You decide to scream for a little while."
+      },
+      {
+        "name": "page_3",
+        "description": "Alright, time to get moving! You start walking forwards"
+      }
+    ],
+    "text": "You awake to find yourself in the middle of a forest. It's pretty dark and that is kind of scary. What's more scary is the fact that you don't remember anything. Oooooh. Whatcha gonna do?"
+  },
+  {
+    "name": "page_2",
+    "next_pages": [],
+    "text": "Your frantic screams wake up the bats. You're done for."
+  },
+  {
+    "name": "page_3",
+    "next_pages": [],
+    "text": "You walk forward, and as it turns out your home was about 5 minutes away. You're safe now, until the NEXT TIME!"
+  }
+]
