@@ -1,23 +1,48 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <component-navbar></component-navbar>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from './components/Navbar'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'component-navbar': Navbar
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  background-color: #DDD;
+  padding: 0 1rem;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: sans-serif;
+}
+
+.btn {
+  background-color: white;
+  border-color: #111;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.btn.btn-primary {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #3FB0AC;
+  color: #BBB;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 200ms;
+}
+
+.btn.btn-primary:hover {
+  background-color: #3FB0AC;
+  border-color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 </style>
