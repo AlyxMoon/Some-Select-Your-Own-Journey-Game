@@ -1,0 +1,40 @@
+[
+  {
+    "name": "page-1",
+    "next_pages": [
+      {
+        "name": "page-3",
+        "description": "You decide to scream for a little while."
+      },
+      {
+        "name": "page-2",
+        "description": "Alright, time to get moving! You start walking forwards"
+      }
+    ]
+  },
+  {
+    "name": "page-2",
+    "next_pages": []
+  },
+  {
+    "name": "page-3",
+    "next_pages": [
+      {
+        "name": "page-4",
+        "description": "Running sounds like a lovely idea. You start doing that."
+      },
+      {
+        "name": "page-5",
+        "description": "No, diplomacy is always important. You say hello to the bear-thing."
+      }
+    ]
+  },
+  {
+    "name": "page-4",
+    "next_pages": []
+  },
+  {
+    "name": "page-5",
+    "next_pages": []
+  }
+]

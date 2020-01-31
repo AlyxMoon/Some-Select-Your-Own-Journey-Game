@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Menu from '@/components/Menu'
 import Page from '@/components/Page'
 
-import pageData from '@/assets/pages.json'
+import pageData from '@static/stories/the-dark-woods/pages.json'
 
 const pageRoutes = pageData.map(data => {
   return {
@@ -22,7 +22,7 @@ export default new Router({
       path: '/',
       name: 'Menu',
       component: Menu,
-      props: { firstPageLink: `/page/page_1` }
+      props: { firstPageLink: `/page/page-1` }
     },
     ...pageRoutes
   ]
