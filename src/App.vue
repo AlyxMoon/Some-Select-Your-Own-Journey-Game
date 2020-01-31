@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <component-navbar></component-navbar>
-    <router-view/>
+    <component-navbar :config="config"></component-navbar>
+    <router-view :config="config" />
   </div>
 </template>
 
@@ -11,6 +11,13 @@ export default {
   name: 'App',
   components: {
     'component-navbar': Navbar
+  },
+  data () {
+    return {
+      config: {
+        autoplay: true,
+      },
+    }
   }
 }
 </script>

@@ -1,17 +1,31 @@
 <template>
   <div id="navbar-wrapper">
     <nav id="component-navbar">
-      <a href="/">
-        <img src="@/assets/img/logo.png" class="logo" />
-        <span class="logo-text">Home</span>
-      </a>
+      <div class="nav-section heading">
+        <router-link to="/">
+          <img src="@/assets/img/logo.png" class="logo" />
+          <span class="logo-text">Home</span>
+        </router-link>
+      </div>
+      <div class="nav-section">
+        <div class="dropdown">
+          Options
+          <div class="options">
+            <label for="option-autoplay">
+              <input name="option-autoplay" type="checkbox" v-model="config.autoplay" />
+              Autoplay audio
+            </label>
+          </div>
+        </div>
+      </div>
     </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  props: ['config'],
 }
 </script>
 
@@ -26,13 +40,16 @@ nav {
   color: #CCC;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 40px;
   padding: 5px 10px;
   left: 0;
   right: 0;
   top: 0;
   position: fixed;
+}
 
+nav .heading {
   font-size: 32px;
 }
 

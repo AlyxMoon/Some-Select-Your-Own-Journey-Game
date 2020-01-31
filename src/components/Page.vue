@@ -1,5 +1,13 @@
 <template>
   <div id="page">
+    <figure>
+      <audio
+          controls
+          :autoplay="config.autoplay"
+          :src="'/static/stories/the-dark-woods/audio/' + name + '.mp3'">
+      </audio>
+  </figure>
+
     <p>
       {{ pagesContent[name] }}
     </p>
@@ -25,7 +33,7 @@ import page5Content from '@static/stories/the-dark-woods/page-5.txt'
 
 export default {
   name: 'Page',
-  props: ['name', 'text', 'next_pages'],
+  props: ['config', 'name', 'text', 'next_pages'],
   data () {
     return {
       pagesContent: {
@@ -46,6 +54,26 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+p {
+  white-space: pre-wrap;
+}
+
+figure {
+  margin: 10px 0;
+}
+
+figure audio {
+  width: 100%;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px 8px #AAA;
+  background-color: #AAA;
+}
+figure audio:focus {
+  outline: none;
 }
 
 .next-pages {
