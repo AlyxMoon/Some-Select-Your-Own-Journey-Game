@@ -28,7 +28,7 @@ html, body, #app {
 }
 
 html {
-  background-color: #DDD;
+  background-color: #BBB;
   padding: 0 1rem;
   text-align: center;
   font-family: sans-serif;

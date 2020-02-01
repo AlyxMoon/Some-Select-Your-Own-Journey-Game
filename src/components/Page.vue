@@ -6,7 +6,7 @@
           :autoplay="config.autoplay"
           :src="'/static/stories/the-dark-woods/audio/' + name + '.mp3'">
       </audio>
-  </figure>
+    </figure>
 
     <p>
       {{ pagesContent[name] }}
@@ -62,6 +62,9 @@ p {
 
 figure {
   margin: 10px 0;
+
+  position: relative;
+  z-index: -1;
 }
 
 figure audio {
