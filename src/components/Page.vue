@@ -1,26 +1,39 @@
 <template>
   <div id="page">
-    <figure>
-      <audio
-          controls
-          :autoplay="config.autoplay"
-          :src="'/static/stories/the-dark-woods/audio/' + name + '.mp3'">
-      </audio>
-    </figure>
 
-    <p>
+    <p v-if="config.bettenTextMode">
+      <span
+        class="bonus-text"
+        v-for="i in Math.floor(pagesContent[name].length / 4)"
+        :key="i"
+      >
+        It's Pretty Dark and That's Kind of Scary
+      </span>
+    </p>
+    <p v-else>
       {{ pagesContent[name] }}
     </p>
-    <ul class="next-pages">
-      <li
-        :key="'page-' + i"
-        v-for="(page, i) in next_pages"
-      >
-        <span>{{ page.description }}</span>
-        <router-link :to="`/page/${page.name}`" class="btn btn-primary btn-small">Go to {{ page.name }}</router-link>
 
-      </li>
-    </ul>
+    <div>
+      <figure>
+        <audio
+            controls
+            :autoplay="config.autoplay"
+            :src="'/static/stories/the-dark-woods/audio/' + name + '.mp3'">
+        </audio>
+      </figure>
+
+      <ul class="next-pages">
+        <li
+          :key="'page-' + i"
+          v-for="(page, i) in next_pages"
+        >
+          <span>{{ page.description }}</span>
+          <router-link :to="`/page/${page.name}`" class="btn btn-primary btn-small">Go to {{ page.name }}</router-link>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
@@ -60,11 +73,12 @@ p {
   white-space: pre-wrap;
 }
 
+.bonus-text {
+  white-space: normal;
+}
+
 figure {
   margin: 10px 0;
-
-  position: relative;
-  z-index: -1;
 }
 
 figure audio {
