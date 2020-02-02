@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Menu from '@/components/Menu'
-import Page from '@/components/Page'
+
+import Builder from '@/pages/Builder'
+import Menu from '@/pages/Menu'
+import Page from '@/pages/Page'
 
 import pageData from '@static/stories/the-dark-woods/pages.json'
 
@@ -10,7 +12,7 @@ const pageRoutes = pageData.map(data => {
     path: `/page/${data.name}`,
     name: `Page ${data.name}`,
     component: Page,
-    props: data
+    props: data,
   }
 })
 
@@ -24,6 +26,11 @@ export default new Router({
       component: Menu,
       props: { firstPageLink: `/page/page-1` }
     },
-    ...pageRoutes
+    ...pageRoutes,
+    {
+      path: '/builder',
+      name: 'Builder',
+      component: Builder,
+    },
   ]
 })
